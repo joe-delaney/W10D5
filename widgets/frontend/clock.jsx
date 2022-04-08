@@ -5,23 +5,33 @@ export default class Clock extends React.Component {
     super(props);
     let date = new Date();
     this.state = {
-      hours: date.getHours(),
-      minutes: date.getMinutes(),
-      seconds: date.getSeconds()
+      date: date.toString().split(" ").slice(0, 4).join(" "),
+      time: `${date.toString().split(" ")[4]} EST`
     };
     this.tick = this.tick.bind(this);
   }
 
   render() {
-    return <h1>{`${this.state.hours}:${this.state.minutes}:${this.state.seconds}`}</h1>;
+    return < >
+        <h1 className="clock-title">Clock</h1>
+          <div className="clock">
+            <div className="date-labels">
+              <h1>Time: </h1>
+              <h1>Date: </h1>
+            </div>
+            <div className="date-values">
+              <h1>{this.state.time}</h1>
+              <h1>{this.state.date}</h1>
+            </div>
+        </div>
+          </>
   }
 
   tick() {
     let date = new Date();
     this.setState ({
-      hours: date.getHours(),
-      minutes: date.getMinutes(),
-      seconds: date.getSeconds()
+      date: date.toString().split(" ").slice(0, 4).join(" "),
+      time: `${date.toString().split(" ")[4]} EST`
     });
   }
 

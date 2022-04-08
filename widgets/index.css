@@ -1,4 +1,19 @@
 
-h1 {
+.clock {
   font-family: 'Bebas Neue', cursive;
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  height: max-content;
+  margin: auto;
+  border: 2px solid black;
+  padding: 0 50;
+  background-color: orange;
+  color: white;
+}
+
+.clock-title {
+  padding-right: 100px;
+  margin: 0 auto;
+  width: 25%;
 }
