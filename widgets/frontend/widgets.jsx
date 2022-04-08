@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     content: 'I am the third'
   }
 ]}/>;
-  ReactDOM.render(tabs, root);
+
+  const widgets = <div className="widgets">{clock} {tabs}</div>
+
+
+  ReactDOM.render(widgets, root);
 });
 

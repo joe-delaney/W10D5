@@ -8,7 +8,14 @@ export default class Header extends React.Component {
   }
 
   render() {
-    return <h1 onClick = {this.tabSelected} >{this.props.title}</h1>
+    let className;
+    // debugger;
+    if(this.props.selected === this.props.idx) {
+      className = "header active";
+    } else {
+      className = "header";
+    }
+    return <span className={className} onClick = {this.tabSelected} >{this.props.title}</span>
   };
 
   tabSelected() {

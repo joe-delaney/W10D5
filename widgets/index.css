@@ -1,3 +1,9 @@
+.widgets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .clock {
   font-family: 'Bebas Neue', cursive;
@@ -16,4 +22,51 @@
   padding-right: 100px;
   margin: 0 auto;
   width: 25%;
+}
+
+.header, .content {
+  background-color: lightblue;
+}
+
+.header {
+  width: 70px;
+  font-family: Open Sans;
+  line-height: 1.2;
+  font-size: 20px;
+  font-weight: 300;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.content {
+  width: 214px;
+  font-size: 20;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  height: 200px;
+  align-items: center;
+  border-top: none;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.header:hover {
+  background-color: lightyellow;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: none;
 }

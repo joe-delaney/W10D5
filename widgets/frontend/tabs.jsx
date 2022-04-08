@@ -14,12 +14,12 @@ export default class Tabs extends React.Component {
 
   render() {
     return <><h1>Tabs</h1>
-    <ul>
+    <ul className="tabs">
       {this.props.tabs.map((tab, i) => {
-        return <Header key={`${tab.title}${i}`} title={tab.title} content={tab.content} updateSelected= {this.updateSelected} idx = {i}/>
+        return <Header key={`${tab.title}${i}`} title={tab.title} content={tab.content} updateSelected= {this.updateSelected} idx = {i} selected={this.state.selected}/>
       })}
     </ul>
-    <article>{this.props.tabs[this.state.selected].content}</article>
+    <article className="content">{this.props.tabs[this.state.selected].content}</article>
   </>
   }
 
