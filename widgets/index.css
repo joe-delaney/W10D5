@@ -70,3 +70,13 @@
   font-weight: 700;
   border-bottom: none;
 }
+
+.weather {
+  background-color: lightgreen;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  font-family: 'Bebas Neue', cursive;
+  font-size: larger;
+}
